@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.banner { clip-path: polygon(0 0, 100% 0, 100% 44%, 0 100%); }
+
+.diagonal-top-sm { clip-path: polygon(0 15%, 100% 3%, 100% 100%, 0 100%); }
+.diagonal-top-md { clip-path: polygon(0 15%, 100% 5%, 100% 100%, 0 100%); }
