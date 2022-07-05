@@ -7,7 +7,7 @@ const buttons = [
     },
     {
         name: 'Log out',
-        route: '/login',
+        route: '/',
     }
 ]
 

@@ -3,7 +3,7 @@ import MenuCard from "../../components/card/menucard";
 
 const Home = () => {
     return (
-        <Layout buttons={[{ name: 'Log out', route: '/login' }]}>
+        <Layout buttons={[{ name: 'Log out', route: '/' }]}>
             <section className="w-full flex justify-between mt-28">
                 <div className="grid grid-cols-2 grid-rows-2 gap-12">
                     <MenuCard icon="/img/users.png" title="Administrar usuarios" to="/users" />

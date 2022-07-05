@@ -1,6 +1,7 @@
 import Layout from "../../components/layout/layout";
 import SearchForm from '../../components/inputs/SearchForm'
 import UserCard from '../../components/card/usercard';
+import { useNavigate } from "react-router-dom";
 
 const buttons = [
     {
@@ -9,17 +10,18 @@ const buttons = [
     },
     {
         name: 'Log out',
-        route: '/login',
+        route: '/',
     }
 ]
 
 const UserPage = () => {
+    const navigate = useNavigate()
     return (
         <Layout buttons={buttons}>
             <section className="grid grid-cols-2 gap-10 ">
                 <div >
                     <span className="w-full inline-flex justify-end">
-                        <button className="btn rounded-full">Agregar</button>
+                        <button onClick={() => navigate('/add-user')} className="btn rounded-full">Agregar</button>
                     </span>
                     <div className="card card-bordered border-gray-600 overflow-y-auto mt-3 p-3">
                         <SearchForm  />

@@ -10,7 +10,7 @@ const buttons = [
     },
     {
         name: 'Log out',
-        route: '/login',
+        route: '/',
     }
 ];
 
@@ -53,28 +53,26 @@ const foods = [
 ];
 
 const EntitiesPage = () => {
-    <Layout buttons={buttons}>
-        <section className="grid grid-cols-2 gap-10">
-            <div className="w-full">
-                <EntityTable tableName="Ejercicios" placeholder="Ejercicio" to="/add-sport">
-                    {
-                        sports.map((sport) => (
-                            <SportCard key={sport.name} sportName={sport.name} sportImg={sport.img} />
-                        ))
-                    }
-                </EntityTable>
-            </div>
-            <div className="w-full">
-                <EntityTable tableName="Comidas" placeholder="Comida" to="/add-food" >
-                    {
-                        foods.map((food) => (
-                            <FoodCard key={food.name} foodName={food.name} foodKcal={food.kcal} />
-                        ))
-                    }
-                </EntityTable>
-            </div>
-        </section>
-    </Layout>
+    return (
+        <Layout buttons={buttons}>
+            <section className="grid grid-cols-2 gap-10 mt-5">
+                    <EntityTable tableName="Ejercicios" placeholder="Ejercicio" to="/add-sport">
+                        {
+                            sports.map((sport) => (
+                                <SportCard key={sport.name} sportName={sport.name} sportImg={sport.img} />
+                            ))
+                        }
+                    </EntityTable>
+                    <EntityTable tableName="Comidas" placeholder="Comida" to="/add-food" >
+                        {
+                            foods.map((food) => (
+                                <FoodCard key={food.name} foodName={food.name} foodKcal={food.kcal} />
+                            ))
+                        }
+                    </EntityTable>
+            </section>
+        </Layout>
+    )
 }
 
 export default EntitiesPage;
